@@ -1,10 +1,10 @@
 import { Masonry } from "@mui/lab";
 import {
-  Autocomplete,
+  
   Box,
   Card,
   CardMedia,
-  TextField,
+  
   Typography,
 } from "@mui/material";
 import PageTransition from "./../components/PageTransition";
