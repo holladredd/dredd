@@ -134,7 +134,7 @@ const Home = () => {
           startIcon={<FaLongArrowAltRight />}
           onClick={navigate}
         >
-          Learn More
+          who am i ?
         </Button>
       </Box>
     </PageTransition>
