@@ -99,8 +99,8 @@ const About = () => {
         <Grid
           item
           xs={11}
-          md={5}
-          lg={4}
+          md={11}
+          lg={5}
           sx={{
             display: "flex",
             alignItems: "center",
@@ -116,8 +116,8 @@ const About = () => {
             whileHover="hover"
             exit="exit"
             sx={{
-              width: { xs: 250, md: 350 },
-              height: { xs: 250, md: 350 },
+              width: { xs: 250, sm: 300, md: 350, lg: 400 },
+              height: { xs: 250, sm: 300, md: 350, lg: 400 },
               borderRadius: 50,
               display: "flex",
               justifyContent: "center",
@@ -128,8 +128,8 @@ const About = () => {
               alt="Folayan Olamide Mayokun"
               src="./image.jpg"
               sx={{
-                width: { xs: 250, md: 350 },
-                height: { xs: 250, md: 350 },
+                width: { xs: 250, sm: 300, md: 350, lg: 400 },
+                height: { xs: 250, sm: 300, md: 350, lg: 400 },
               }}
             />
           </Box>

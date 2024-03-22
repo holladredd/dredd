@@ -1,12 +1,5 @@
 import { Masonry } from "@mui/lab";
-import {
-  
-  Box,
-  Card,
-  CardMedia,
-  
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardMedia, Typography } from "@mui/material";
 import PageTransition from "./../components/PageTransition";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -113,6 +106,7 @@ const Graphics = () => {
       opacity: 0,
       scale: 0.5,
     },
+  
     visible: {
       y: 0,
       scale: 1,

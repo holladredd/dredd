@@ -15,23 +15,23 @@
 }
 @font-face {
   font-family: Squids;
-  src: url(src/fonts/Game\ Of\ Squids.ttf);
+  src: url(/fonts/Game\ Of\ Squids.ttf);
 }
 @font-face {
   font-family: Anta;
-  src: url(src/fonts/Anta-Regular.ttf);
+  src: url(/fonts/Anta-Regular.ttf);
 }
 @font-face {
   font-family: Playfair;
-  src: url(src/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+  src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: Misa;
-  src: url(src/fonts/13_Misa.TTF);
+  src: url(/fonts/13_Misa.TTF);
 }
 @font-face {
   font-family: fasterstroker;
-  src: url(src/fonts/Faster\ Stroker.otf);
+  src: url(/fonts/Faster\ Stroker.otf);
 }
 
 * {

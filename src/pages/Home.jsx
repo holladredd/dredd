@@ -53,14 +53,14 @@ const Home = () => {
         sx={{
           display: { xs: "flex", md: "flexbox" },
           flexDirection: { xs: "column" },
-
+          heigth: { sm: "100vh", Md: "100%" },
           alignItems: { xs: "center", md: "flex-start" },
         }}
       >
         <Typography
           sx={{
             zIndex: 0,
-            fontSize: { md: 150 },
+            fontSize: { sm: 150, lg: 200 },
             fontFamily: "squids",
             color: "#c7d9f7fd",
             margin: 0,
@@ -82,7 +82,7 @@ const Home = () => {
             fontFamily: "squids",
             color: "#c7d9f7fd",
             margin: 0,
-            fontSize: { md: 130 },
+            fontSize: { sm: 130, lg: 200 },
           }}
           variant="h1"
           color="initial"
@@ -100,7 +100,7 @@ const Home = () => {
             zIndex: 0,
             fontFamily: "squids",
             color: "#c7d9f7fd",
-            fontSize: { md: 150 },
+            fontSize: { sm: 150, lg: 200 },
           }}
           variant="h1"
           color="initial"

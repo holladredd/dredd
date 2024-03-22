@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./layouts/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
-import { Suspense, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -57,7 +57,7 @@ function App() {
       <Navbar zIndex={40} />
 
       <AnimatePresence initial={false} mode="wait">
-        <Suspense fallback={<h1>loading....</h1>}>
+        
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
@@ -66,10 +66,9 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Project" element={<Project />} />
             <Route path="/Project/Graphics" element={<Graphics />} />
-
             <Route path="*" element={<Errorpage />} />
           </Routes>
-        </Suspense>
+      
       </AnimatePresence>
     </Box>
   );
