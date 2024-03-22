@@ -159,7 +159,7 @@ const Skills = () => {
             opacity: 0,
             scale: 0.8,
           }}
-          sx={{ padding: 1, color: "#c7d9f7fd" }}
+          sx={{ padding: 1, color: "#c7d9f7fd", fontFamily: "Short Stack" }}
         >
           go back
         </Button>
@@ -187,7 +187,7 @@ const Skills = () => {
             opacity: 0,
             scale: 0.8,
           }}
-          sx={{ padding: 1, color: "#c7d9f7fd" }}
+          sx={{ padding: 1, color: "#c7d9f7fd", fontFamily: "Short Stack" }}
         >
           Contact
         </Button>
@@ -221,7 +221,7 @@ const Skills = () => {
           exit="exit"
           sx={{ width: "100%", display: "flex", justifyContent: "center" }}
         >
-          <Typography variant="h4" color="#c7d9f7fd" fontFamily="squids">
+          <Typography variant="h1" color="#c7d9f7fd" fontFamily="Moirai One">
             Tools.
           </Typography>
         </Box>
@@ -241,7 +241,7 @@ const Skills = () => {
             sx={{
               textAlign: "center",
 
-              fontFamily: "squids",
+              fontFamily: "Lexend Giga",
               color: "#c7d9f7fd",
               // borderBottom: "2px solid #c7d9f7fd",
             }}
@@ -291,7 +291,7 @@ const Skills = () => {
                 <Typography
                   variant="caption"
                   sx={{
-                    fontFamily: "Anta",
+                    fontFamily: "Short Stack",
                     color: "#c7d9f7fd",
                     marginLeft: 1,
                   }}
@@ -318,7 +318,7 @@ const Skills = () => {
             sx={{
               textAlign: "center",
 
-              fontFamily: "squids",
+              fontFamily: "Lexend Giga",
               color: "#c7d9f7fd",
               // borderBottom: "2px solid #c7d9f7fd",
             }}
@@ -368,7 +368,7 @@ const Skills = () => {
                 <Typography
                   variant="caption"
                   sx={{
-                    fontFamily: "Anta",
+                    fontFamily: "Short Stack",
                     color: "#c7d9f7fd",
                     marginLeft: 1,
                   }}

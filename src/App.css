@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Moirai+One&display=swap");
@@ -6,7 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anta&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Great+Vibes&family=Lexend+Giga:wght@100..900&family=Moirai+One&family=Monoton&family=Notable&family=Paprika&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Glitch+Pop&family=Short+Stack&family=Tilt+Prism&display=swap");
 @import-normalize;
 * {
   margin: 0;
@@ -15,6 +16,10 @@
 }
 @font-face {
   font-family: Squids;
+  src: url("https://fonts.googleapis.com/css2?family=Moirai+One&display=swap");
+}
+@font-face {
+  font-family: Squid;
   src: url(/fonts/Game\ Of\ Squids.ttf);
 }
 @font-face {

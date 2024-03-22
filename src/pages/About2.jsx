@@ -112,7 +112,12 @@ const About2 = () => {
         <Button
           vairant="text"
           onClick={() => navi("/About")}
-          sx={{ marginLeft: 1, padding: 2, color: "#c7d9f7fd" }}
+          sx={{
+            marginLeft: 1,
+            padding: 2,
+            color: "#c7d9f7fd",
+            fontFamily: "Short Stack",
+          }}
         >
           {/* <IoIosArrowBack size={60} /> */}
           go back
@@ -120,7 +125,12 @@ const About2 = () => {
         <Button
           vairant="text"
           onClick={() => navi("/Skills")}
-          sx={{ marginRight: 1, padding: 2, color: "#c7d9f7fd" }}
+          sx={{
+            marginRight: 1,
+            padding: 2,
+            color: "#c7d9f7fd",
+            fontFamily: "Short Stack",
+          }}
         >
           {/* <IoIosArrowForward size={60} /> */}
           Go to skills
@@ -156,7 +166,11 @@ const About2 = () => {
           exit="exit"
           sx={{ width: "100%", display: "flex", justifyContent: "center" }}
         >
-          <Typography variant="h4" color="#c7d9f7fd" fontFamily="squids">
+          <Typography
+            variant="h2"
+            color="#c7d9f7fd"
+            sx={{ fontFamily: "Moirai One" }}
+          >
             My Works
           </Typography>
         </Box>
@@ -206,7 +220,7 @@ const About2 = () => {
                     variant="h5"
                     sx={{
                       textAlign: "center",
-                      fontFamily: "squids",
+                      fontFamily: "Lexend Giga",
                       color: "#c7d9f7fd",
                       borderBottom: "2px solid #c7d9f7fd",
                       // borderLeft: "2px solid #c7d9f7fd",
@@ -215,24 +229,12 @@ const About2 = () => {
                     {work.title}
                   </Typography>
                 </Box>
-                {/* <Box
-                  component={motion.div}
-                  variants={subComponent}
-                  initial="hidden"
-                  animate={{ width: "100%" }}
-                  whileHover="width"
-                  exit="exit"
-                  sx={{
-                    width: "100%",
-                    marginTop: "5px",
-                    padding: "1px",
-                  }}
-                ></Box> */}
+
                 <Typography
                   variant="caption"
                   sx={{
                     textAlign: { xs: "justify", md: "start" },
-                    fontFamily: "Anta",
+                    fontFamily: "Short Stack",
                     color: "#c7d9f7fd",
                   }}
                 >

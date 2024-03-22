@@ -51,19 +51,20 @@ const Home = () => {
     <PageTransition>
       <Box
         sx={{
-          display: { xs: "flex", md: "flexbox" },
-          flexDirection: { xs: "column" },
-          heigth: { sm: "100vh", Md: "100%" },
-          alignItems: { xs: "center", md: "flex-start" },
+          display: "flex",
+          flexDirection: "column",
+          heigth: { sm: "100vh", Md: "100vh" },
+          alignItems: { xs: "center", md: "center", lg: "flex-start" },
         }}
       >
         <Typography
           sx={{
             zIndex: 0,
             fontSize: { sm: 150, lg: 200 },
-            fontFamily: "squids",
+            fontFamily: "monoton",
             color: "#c7d9f7fd",
-            margin: 0,
+            marginTop: 3,
+            marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
           color="initial"
@@ -79,10 +80,11 @@ const Home = () => {
         <Typography
           sx={{
             zIndex: 0,
-            fontFamily: "squids",
+            fontFamily: "monoton",
             color: "#c7d9f7fd",
             margin: 0,
             fontSize: { sm: 130, lg: 200 },
+            marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
           color="initial"
@@ -98,9 +100,10 @@ const Home = () => {
         <Typography
           sx={{
             zIndex: 0,
-            fontFamily: "squids",
+            fontFamily: "monoton",
             color: "#c7d9f7fd",
             fontSize: { sm: 150, lg: 200 },
+            marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
           color="initial"
@@ -111,7 +114,7 @@ const Home = () => {
           whileHover="scale"
           exit="exit"
         >
-          Dredd
+          DREDD
         </Typography>
         <Button
           variant="text"
@@ -122,7 +125,7 @@ const Home = () => {
           whileHover="scaleone"
           exit="exit"
           sx={{
-            fontFamily: "squids",
+            fontFamily: "short stack",
             color: "#c7d9f7fd",
             display: "flex",
             justifySelf: "center",

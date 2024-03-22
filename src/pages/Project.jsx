@@ -134,16 +134,17 @@ const Project = () => {
         whileHover="hover"
         exit="exit"
         variant="text"
-        onClick={() => navi("/Project/Graphics")}
+        onClick={() => navi("/Graphics")}
         sx={{
           backgroundColor: "transparent",
           borderRight: "2px solid #c7d9f7fd",
           borderBottom: "2px solid #c7d9f7fd",
           position: "absolute",
           color: "#c7d9f7fd",
-          fontFamily: "squids",
+          fontFamily: "Short Stack",
           bottom: { xs: 70, md: 16 },
           right: 0,
+          zIndex: 30,
         }}
       >
         Graphics
@@ -170,8 +171,8 @@ const Project = () => {
             width: "98%",
             textAlign: "start",
             margin: "20px",
-            fontFamily: "squids",
-            fonSize: 60,
+            fontFamily: "Moirai One",
+            fontSize: { xs: 70, md: 120 },
           }}
         >
           Project.
@@ -179,7 +180,7 @@ const Project = () => {
 
         <Box
           sx={{
-            width: { xs: "80%", md: "50%" },
+            width: "90%",
             margin: "20px",
             padding: 2,
           }}
@@ -195,8 +196,8 @@ const Project = () => {
             variant="caption"
             sx={{
               textAlign: "start",
-              fontFamily: "anta",
-              fonSize: 60,
+              fontFamily: "Short Stack",
+              fontSize: { md: 20 },
             }}
           >
             Here, you will find a list of my projects. Each project reflects my
@@ -229,7 +230,7 @@ const Project = () => {
                   }}
                   onClick={() => handleClick(project.id)}
                   sx={{
-                    width: { xs: "40%", md: "20%" },
+                    width: { xs: "60%", md: "20%" },
                     justifyContent: "flex-start",
                   }}
                 >
@@ -239,6 +240,7 @@ const Project = () => {
                       color: "#009b4d",
                     }}
                     sx={{
+                      fontFamily: "Short Stack",
                       color: "#c7d9f7fd",
                       borderBottom: "2px solid #c7d9f7fd ",
                     }}
@@ -268,7 +270,7 @@ const Project = () => {
                           sx={{
                             textDecoration: "none",
                             color: "#c7d9f7fd",
-                            fontFamily: "anta",
+                            fontFamily: "Short Stack",
                           }}
                         >
                           {project.desc}
@@ -284,7 +286,10 @@ const Project = () => {
                           <Typography
                             variant="caption"
                             color="#c7d9f7fd"
-                            sx={{ textDecoration: "none" }}
+                            sx={{
+                              textDecoration: "none",
+                              fontFamily: "Lexend Giga",
+                            }}
                           >
                             {project.techs}
                           </Typography>
@@ -304,6 +309,7 @@ const Project = () => {
                                   justifyCOntentL: "space-between",
                                   alignItems: "center",
                                   borderBottom: "1px solid #c7d9f7fd",
+                                  fontFamily: "Short Stack",
                                 }}
                               >
                                 Project code
@@ -319,6 +325,7 @@ const Project = () => {
                                   justifyCOntentL: "space-between",
                                   alignItems: "center",
                                   borderBottom: "1px solid #c7d9f7fd",
+                                  fontFamily: "Short Stack",
                                 }}
                                 endIcon={<FaEye />}
                               >

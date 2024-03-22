@@ -106,7 +106,7 @@ const Graphics = () => {
       opacity: 0,
       scale: 0.5,
     },
-  
+
     visible: {
       y: 0,
       scale: 1,
@@ -191,7 +191,12 @@ const Graphics = () => {
             animate="visible"
             whileHover="hover"
             exit="exit"
-            sx={{ width: "fit", fontFamily: "anta" }}
+            sx={{
+              marginTop: 3,
+              width: "fit",
+              fontFamily: "Moirai One",
+              fontSize: 60,
+            }}
           >
             Graphics.
           </Typography>
@@ -261,13 +266,15 @@ const Graphics = () => {
                     color="#c7d9f7fd"
                     sx={{
                       width: "100%",
-                      padding: 2,
+                      padding: 1,
                       position: "absolute",
                       bottom: -10,
                       backgroundColor: "#00000063",
                       // boxShadow: "0px 0px 20px #00000063",
                       boxShadow: "0px 1px 5px #aeafb1, 0px -1px 5px #aeafb1",
-                      fontFamily: "anta",
+                      fontFamily: "Short Stack",
+                      fontWeight: 600,
+                      fontSize: 20,
                       textTransform: "uppercase",
                       mixBlendMode: "subtract",
                     }}

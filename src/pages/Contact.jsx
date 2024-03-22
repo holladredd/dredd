@@ -106,19 +106,20 @@ const Contact = () => {
         whileHover="hover"
         exit="exit"
         variant="text"
-        onClick={() => navi("/")}
+        onClick={() => navi("/Project")}
         sx={{
           backgroundColor: "transparent",
           borderRight: "2px solid #c7d9f7fd",
           borderBottom: "2px solid #c7d9f7fd",
           position: "absolute",
           color: "#c7d9f7fd",
-          fontFamily: "squids",
+          fontFamily: "Short Stack",
           bottom: { xs: 70, md: 16 },
           right: -30,
+          zIndex: 30,
         }}
       >
-        Go back home
+        Check Out my Projects
       </Button>
       <Box
         sx={{
@@ -144,7 +145,7 @@ const Contact = () => {
             variant="h1"
             sx={{
               textAlign: "start",
-              fontFamily: "squids",
+              fontFamily: "Moirai One",
               fonSize: 60,
             }}
           >
@@ -156,7 +157,7 @@ const Contact = () => {
             sx={{
               margin: "10px",
               textAlign: "start",
-              fontFamily: "anta",
+              fontFamily: "Short Stack",
             }}
           >
             Would you like a stunning, meticulously crafted website that you can
@@ -170,7 +171,7 @@ const Contact = () => {
               margin: "10px",
 
               textAlign: "start",
-              fontFamily: "anta",
+              fontFamily: "Short Stack",
             }}
           >
             Or <br />
@@ -184,7 +185,7 @@ const Contact = () => {
               sx={{
                 margin: "10px",
                 textAlign: "start",
-                fontFamily: "anta",
+                fontFamily: "Short Stack",
               }}
             >
               Email:
@@ -197,7 +198,7 @@ const Contact = () => {
               sx={{
                 margin: "10px",
                 textAlign: "start",
-                fontFamily: "anta",
+                fontFamily: "Short Stack",
               }}
             >
               holladred@gmail.com
@@ -215,7 +216,11 @@ const Contact = () => {
           left: 16,
         }}
       >
-        <Typography variant="caption" color="#c7d9f7fd">
+        <Typography
+          variant="caption"
+          color="#c7d9f7fd"
+          fontFamily="Short Stack"
+        >
           On social:
         </Typography>
         <Box

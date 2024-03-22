@@ -116,9 +116,10 @@ const About = () => {
             whileHover="hover"
             exit="exit"
             sx={{
-              width: { xs: 250, sm: 300, md: 350, lg: 400 },
-              height: { xs: 250, sm: 300, md: 350, lg: 400 },
+              width: { xs: 250, sm: 300, md: 450, lg: 400 },
+              height: { xs: 250, sm: 300, md: 450, lg: 400 },
               borderRadius: 50,
+              padding: 10,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -128,8 +129,9 @@ const About = () => {
               alt="Folayan Olamide Mayokun"
               src="./image.jpg"
               sx={{
-                width: { xs: 250, sm: 300, md: 350, lg: 400 },
-                height: { xs: 250, sm: 300, md: 350, lg: 400 },
+                width: { xs: 250, sm: 300, md: 450, lg: 400 },
+                height: { xs: 250, sm: 300, md: 450, lg: 400 },
+                margin: 10,
               }}
             />
           </Box>
@@ -137,7 +139,8 @@ const About = () => {
         <Grid
           item
           xs={11}
-          md={5}
+          md={11}
+          lg={5}
           sx={{
             padding: "10px",
           }}
@@ -159,7 +162,7 @@ const About = () => {
               whileHover="scaleone"
               exit="exit"
               sx={{
-                fontFamily: "Anta",
+                fontFamily: "Lexend Giga",
                 fontSize: { xs: 30, md: 60 },
                 margin: "5px",
               }}
@@ -176,7 +179,7 @@ const About = () => {
               whileHover="scaleone"
               exit="exit"
               sx={{
-                fontFamily: "playfair",
+                fontFamily: "Lexend Giga",
                 margin: "5px",
                 fontSize: { xs: 30, md: 40 },
               }}
@@ -193,7 +196,7 @@ const About = () => {
               whileHover="scaleone"
               exit="exit"
               sx={{
-                fontFamily: "playfair",
+                fontFamily: "Short Stack",
                 fontSize: { md: 20 },
                 textAlign: { xs: "justify", md: "start" },
                 margin: "5px",
@@ -221,7 +224,7 @@ const About = () => {
                 whileHover="scaleone"
                 exit="exit"
                 sx={{
-                  fontFamily: "squids",
+                  fontFamily: "Short Stack",
                   color: "white",
                   display: "flex",
                 }}
@@ -239,7 +242,7 @@ const About = () => {
                 whileHover="scaletwo"
                 exit="exit"
                 sx={{
-                  fontFamily: "squids",
+                  fontFamily: "Short Stack",
                   color: "white",
                   display: "flex",
                 }}

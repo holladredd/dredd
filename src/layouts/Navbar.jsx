@@ -138,9 +138,10 @@ const Navbar = () => {
           backgroundColor: "transparent",
           zIndex: 50,
           position: { xs: "fixed" },
-          backdropFilter: "none",
+          backdropFilter: open ? "none" : "blur(30px)",
+          // backgroundColor: "#0c1a32d3",
 
-          mixBlendMode: "difference",
+          // mixBlendMode: "normal",
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -152,6 +153,7 @@ const Navbar = () => {
               height: 60,
 
               opacity: 0.8,
+              zIndex: 70,
             }}
           />
 
@@ -258,7 +260,7 @@ const Navbar = () => {
             >
               <Typography
                 variant="h1"
-                fontFamily="squids"
+                fontFamily="monoton"
                 component={motion.div}
                 variants={dropIn}
                 initial="hidden"
@@ -299,11 +301,10 @@ const Navbar = () => {
                     justifyContent: "center",
                     width: "100%",
                     heigth: "fit",
+
                     borderRadius: 4,
                     backdropFilter: "blur(10px)",
                     backgroundColor: "#0c1a32d3",
-                    // backgroundImage:
-                    //   "linear-gradient(to right bottom, #009b4d, #6898f8)",
                     opacity: "90%",
                   }}
                 >
@@ -311,7 +312,8 @@ const Navbar = () => {
                     sx={{
                       position: "relative",
                       width: "100%",
-                      heigth: "100%",
+                      display: "flex",
+                      flexDirection: "column",
                       borderRadius: "10px",
                       border: "2px solid #c7d9f7fd",
                       mixBlendMode: "normal",
@@ -320,29 +322,24 @@ const Navbar = () => {
                   >
                     <Box
                       sx={{
-                        width: "95%",
-                        padding: "5px",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                        color: "#c7d9f7fd",
                       }}
                     >
-                      <Box
-                        sx={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          width: "100%",
-                          color: "#c7d9f7fd",
-                        }}
-                      >
-                        {navItem.icon}
-                        <MdAir size={30} />
-                      </Box>
-                      <Typography
-                        sx={{ fontFamily: "Misa" }}
-                        variant="h2"
-                        color="#c7d9f7fd"
-                      >
-                        {navItem.text}
-                      </Typography>
+                      {navItem.icon}
+                      <MdAir size={30} />
                     </Box>
+                    <Typography
+                      sx={{
+                        fontFamily: "Tilt Prism",
+                      }}
+                      variant="h2"
+                      color="#c7d9f7fd"
+                    >
+                      {navItem.text}
+                    </Typography>
                   </Box>
                 </Box>
               </Grid>
