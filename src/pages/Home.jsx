@@ -53,7 +53,7 @@ const Home = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          heigth: { sm: "100vh", Md: "100vh" },
+          heigth: { sm: "100vh", Md: "100%" },
           alignItems: { xs: "center", md: "center", lg: "flex-start" },
         }}
       >
