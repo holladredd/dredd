@@ -59,12 +59,12 @@ body {
 }
 
 .cursor {
-  background-color: #c7d9f715;
+  background-color: #09b4ca85;
   height: 6px;
   width: 6px;
-  border: 18px solid #c7d9f715;
+  border: 18px solid #02fcfc50;
   border-radius: 50%;
-  backdrop-filter: "blur(60px)";
+  backdrop-filter: "blur(5px)";
   position: fixed;
 
   top: 0;
