@@ -64,7 +64,7 @@ const Home = () => {
             fontFamily: "monoton",
             color: "#c7d9f7fd",
             marginTop: 3,
-            marginBottom: { sm: 5, md: 2 },
+            marginBottom: { sm: 4, md: 1 },
           }}
           variant="h1"
           color="initial"
@@ -84,7 +84,7 @@ const Home = () => {
             color: "#c7d9f7fd",
             margin: 0,
             fontSize: { sm: 130, lg: 200 },
-            marginBottom: { sm: 5, md: 2 },
+            marginBottom: { sm: 4, md: 1 },
           }}
           variant="h1"
           color="initial"
@@ -103,7 +103,7 @@ const Home = () => {
             fontFamily: "monoton",
             color: "#c7d9f7fd",
             fontSize: { sm: 150, lg: 200 },
-            marginBottom: { sm: 5, md: 2 },
+            marginBottom: { sm: 4, md: 1 },
           }}
           variant="h1"
           color="initial"
