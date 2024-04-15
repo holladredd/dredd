@@ -133,7 +133,7 @@ const Home = () => {
             fontFamily: "short stack",
             color: "#c7d9f7fd",
             display: "flex",
-            position:'absolute',
+            position:'fixed',
             right:'30%',
             top:'50%',
             justifySelf: "center",
