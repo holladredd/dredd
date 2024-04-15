@@ -49,6 +49,7 @@ const Home = () => {
   }
   return (
     <PageTransition>
+      
       <Box
         sx={{
           display: "flex",
@@ -132,6 +133,9 @@ const Home = () => {
             fontFamily: "short stack",
             color: "#c7d9f7fd",
             display: "flex",
+            position:'absolute',
+            right:'30%',
+            top:'50%',
             justifySelf: "center",
             alignSelf: "center",
           }}
