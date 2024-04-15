@@ -83,7 +83,7 @@ const Home = () => {
             fontFamily: "monoton",
             color: "#c7d9f7fd",
             margin: 0,
-            fontSize: { sm: 130, lg: 200 },
+            fontSize: { sm: 130, lg: 150 },
             marginBottom: { sm: 4, md: 1 },
           }}
           variant="h1"
@@ -95,14 +95,14 @@ const Home = () => {
           whileHover="hover"
           exit="exit"
         >
-          i am
+          I am
         </Typography>
         <Typography
           sx={{
             zIndex: 0,
             fontFamily: "monoton",
             color: "#c7d9f7fd",
-            fontSize: { sm: 150, lg: 200 },
+            fontSize: { sm: 150, lg: 150 },
             marginBottom: { sm: 4, md: 1 },
           }}
           variant="h1"
