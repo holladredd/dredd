@@ -208,9 +208,9 @@ const Navbar = () => {
               position: { xs: "fixed", md: "absolute" },
               top: 0,
               backgroundColor: "#0c1a32d3",
-              backgroundImage: `url(
-                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E"
-              )`,
+              // backgroundImage: `url(
+              //   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E"
+              // )`,
               backgroundBlendMode: "darken",
               width: "100%",
               height: "100%",
