@@ -105,8 +105,10 @@ const About2 = () => {
           justifyContent: "space-between",
           alignItems: "center",
           zIndex: 40,
-          position: "absolute",
-          bottom: -30,
+          position: "fixed",
+          bottom: -10,
+          backgroundImage:
+            "radial-gradient(at 0% 100% , #009B4D50 0px , #01011800 80%)",
         }}
       >
         <Button
@@ -143,8 +145,10 @@ const About2 = () => {
           alignItems: "center",
           justifyContent: "space-around",
           width: "100%",
-          height: { sm: "fit", md: "85vh" },
+          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
           marginBottom: 5,
+          backgroundImage:
+            "radial-gradient(at 0% 100% , #009B4D50 0px , #01011800 80%)",
         }}
       >
         <Box

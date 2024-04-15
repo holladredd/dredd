@@ -5,11 +5,12 @@ const PageTransition = ({ children }) => {
     hidden: {
       y: 0,
       opacity: 0,
-      scale: 0.6,
+      scale: 0.9,
     },
     visible: {
-      y: 40,
+      y: 0,
       scale: 1,
+
       borderRadius: "2%",
       opacity: 0.9,
       transition: {
@@ -22,8 +23,8 @@ const PageTransition = ({ children }) => {
 
     exit: {
       y: 0,
-      opacity: 1,
-      scale: 0.6,
+      opacity: 0,
+      scale: 1,
     },
   };
   return (

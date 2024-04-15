@@ -6,7 +6,7 @@ import PageTransition from "./../components/PageTransition";
 
 const dropIn = {
   hidden: {
-    y: -50,
+    y: 0,
     opacity: 0,
     scale: 0.5,
   },
@@ -39,7 +39,7 @@ const dropIn = {
   exit: {
     y: 0,
     opacity: 0,
-    scale: 0.6,
+    scale: 0.9,
   },
 };
 const Home = () => {
@@ -49,17 +49,15 @@ const Home = () => {
   }
   return (
     <PageTransition>
-      
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          position:'fixed',
-          top:0,
-          left:0,
-          overflow:'hidden',
-          heigth: { sm: "100vh", Md: "100%" },
-          alignItems: { xs: "center", md: "center", lg: "flex-start" },
+          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
+          alignItems: { xs: "center", lg: "flex-start" },
+
+          backgroundImage:
+            "radial-gradient(at 0% 20% , #009B4D50 0px , #01011800 80%)",
         }}
       >
         <Typography
@@ -68,8 +66,8 @@ const Home = () => {
             fontSize: { sm: 150, lg: 200 },
             fontFamily: "monoton",
             color: "#c7d9f7fd",
-            marginTop: 3,
-            marginBottom: { sm: 4, md: 1 },
+            marginTop: { xs: 20, md: 10 },
+            marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
           color="initial"
@@ -88,8 +86,8 @@ const Home = () => {
             fontFamily: "monoton",
             color: "#c7d9f7fd",
             margin: 0,
-            fontSize: { sm: 130, lg: 150 },
-            marginBottom: { sm: 4, md: 1 },
+            fontSize: { sm: 130, lg: 200 },
+            marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
           color="initial"
@@ -100,15 +98,15 @@ const Home = () => {
           whileHover="hover"
           exit="exit"
         >
-          I am
+          i am
         </Typography>
         <Typography
           sx={{
             zIndex: 0,
             fontFamily: "monoton",
             color: "#c7d9f7fd",
-            fontSize: { sm: 150, lg: 150 },
-            marginBottom: { sm: 4, md: 1 },
+            fontSize: { sm: 150, lg: 200 },
+            marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
           color="initial"
@@ -133,16 +131,13 @@ const Home = () => {
             fontFamily: "short stack",
             color: "#c7d9f7fd",
             display: "flex",
-            position:'fixed',
-            right:'30%',
-            top:'50%',
-            justifySelf: "center",
+
             alignSelf: "center",
           }}
           startIcon={<FaLongArrowAltRight />}
           onClick={navigate}
         >
-          click to Know more!
+          Learn More
         </Button>
       </Box>
     </PageTransition>

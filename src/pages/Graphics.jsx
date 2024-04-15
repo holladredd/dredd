@@ -171,7 +171,9 @@ const Graphics = () => {
       <Box
         sx={{
           overflowY: "scroll",
-          height: "90vh",
+          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
+          backgroundImage:
+            "radial-gradient(at 100% 50% , #009B4D50 0px , #01011800 80%)",
         }}
       >
         <Box
@@ -192,7 +194,7 @@ const Graphics = () => {
             whileHover="hover"
             exit="exit"
             sx={{
-              marginTop: 3,
+              marginTop: 8,
               width: "fit",
               fontFamily: "Moirai One",
               fontSize: 60,

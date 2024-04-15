@@ -54,9 +54,9 @@ const projects = [
 const Project = () => {
   const subComponent = {
     hidden: {
-      y: -50,
+      y: 0,
       opacity: 0,
-      scale: 0.5,
+      scale: 0.9,
     },
     visible: {
       y: 0,
@@ -110,7 +110,7 @@ const Project = () => {
       color: "#c5b206be",
     },
     exit: {
-      y: 20,
+      y: 0,
       opacity: 0,
     },
   };
@@ -142,7 +142,7 @@ const Project = () => {
           position: "absolute",
           color: "#c7d9f7fd",
           fontFamily: "Short Stack",
-          bottom: { xs: 70, md: 16 },
+          bottom: { xs: 250, md: 100 },
           right: 0,
           zIndex: 30,
         }}
@@ -155,7 +155,9 @@ const Project = () => {
 
           display: "flex",
           flexDirection: "column",
-          height: { sm: "fit", md: "85vh" },
+          height: { xs: "100vh", md: "85vh", lg: "90vh", xl: "100vh" },
+          backgroundImage:
+            "radial-gradient(at 100% 100% , #009B4D50 0px , #01011800 80%)",
         }}
       >
         <Typography
@@ -171,6 +173,7 @@ const Project = () => {
             width: "98%",
             textAlign: "start",
             margin: "20px",
+            marginTop: "45px",
             fontFamily: "Moirai One",
             fontSize: { xs: 70, md: 120 },
           }}
@@ -181,8 +184,8 @@ const Project = () => {
         <Box
           sx={{
             width: "90%",
-            margin: "20px",
-            padding: 2,
+            margin: "10px",
+            marginTop: 0,
           }}
           component={motion.div}
           variants={subComponent}
@@ -211,6 +214,7 @@ const Project = () => {
             width: "fit",
             display: "flex",
             heigth: "20vh",
+            marginLeft: 2,
             flexDirection: "column",
             borderRadius: "12px",
             borderLeft: "8px solid #c7d9f7fd ",
@@ -226,7 +230,7 @@ const Project = () => {
                   whileHover={{
                     backgroundColor: "#009b4d15",
                     color: "#009b4d",
-                    scale: 0.9,
+                    scale: 0.8,
                   }}
                   onClick={() => handleClick(project.id)}
                   sx={{
@@ -258,10 +262,11 @@ const Project = () => {
                           heigth: "fit",
                           position: "fixed",
                           right: { xs: "5%", md: "10%" },
-                          top: { xs: "100%", md: "50%" },
-                          padding: 1,
+                          bottom: { xs: 0, md: 50, lg: 500 },
+                          marginLeft: 1,
                           borderRadius: "12px",
                           justifyContent: "flex-start",
+                          zIndex: 40,
                         }}
                       >
                         <Typography
@@ -271,6 +276,7 @@ const Project = () => {
                             textDecoration: "none",
                             color: "#c7d9f7fd",
                             fontFamily: "Short Stack",
+                            fontSize: 10,
                           }}
                         >
                           {project.desc}
@@ -289,6 +295,7 @@ const Project = () => {
                             sx={{
                               textDecoration: "none",
                               fontFamily: "Lexend Giga",
+                              fontSize: 10,
                             }}
                           >
                             {project.techs}
@@ -301,6 +308,7 @@ const Project = () => {
                           >
                             {project.link ? (
                               <Button
+                                size="small"
                                 variant="text"
                                 component={Link}
                                 to={project.link}
@@ -317,6 +325,7 @@ const Project = () => {
                             ) : null}
                             {project.viewlink ? (
                               <Button
+                                size="small"
                                 variant="text"
                                 component={Link}
                                 to={project.viewlink}

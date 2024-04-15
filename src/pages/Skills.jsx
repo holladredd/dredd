@@ -132,7 +132,7 @@ const Skills = () => {
           alignItems: "center",
           zIndex: 40,
           position: "absolute",
-          bottom: -40,
+          bottom: 40,
         }}
       >
         <Button
@@ -196,11 +196,13 @@ const Skills = () => {
         container
         sx={{
           display: "flex",
-          alignItems: "center",
+
           justifyContent: "space-around",
           paddingTop: "10px",
           width: "100%",
-          height: { sm: "fit", md: "70vh" },
+          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
+          backgroundImage:
+            "radial-gradient(at 50% 100% , #009B4D50 0px , #01011800 80%)",
         }}
       >
         <Box
@@ -219,7 +221,12 @@ const Skills = () => {
             },
           }}
           exit="exit"
-          sx={{ width: "100%", display: "flex", justifyContent: "center" }}
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            marginTop: 5,
+          }}
         >
           <Typography variant="h1" color="#c7d9f7fd" fontFamily="Moirai One">
             Tools.
@@ -232,12 +239,11 @@ const Skills = () => {
           md={5}
           sx={{
             // padding: "2px",
-            margin: "10px",
-            marginBottom: 2,
+            margin: "5px",
           }}
         >
           <Typography
-            variant="h5"
+            variant="h6"
             sx={{
               textAlign: "center",
 
@@ -246,7 +252,7 @@ const Skills = () => {
               // borderBottom: "2px solid #c7d9f7fd",
             }}
           >
-            development
+            Development
           </Typography>
 
           <Grid
@@ -309,12 +315,12 @@ const Skills = () => {
           md={5}
           sx={{
             padding: 2,
-            margin: "10px",
+            margin: "5px",
             marginBottom: 2,
           }}
         >
           <Typography
-            variant="h5"
+            variant="h6"
             sx={{
               textAlign: "center",
 
@@ -323,7 +329,7 @@ const Skills = () => {
               // borderBottom: "2px solid #c7d9f7fd",
             }}
           >
-            graphic & animation
+            Graphic & Animation
           </Typography>
 
           <Grid

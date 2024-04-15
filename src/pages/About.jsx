@@ -44,7 +44,7 @@ const About = () => {
       color: "#009B4D",
     },
     exit: {
-      y: 20,
+      y: 0,
       opacity: 0,
     },
   };
@@ -57,8 +57,9 @@ const About = () => {
     visible: {
       y: 0,
       scale: 1,
-      backgroundImage: "linear-gradient(to right bottom, #009B4D, #c7d9f7fd)",
-      padding: 10,
+      backgroundColor: "none",
+      backgroundImage: "linear-gradient(to right bottom, #009B4D, #c7d9f730)",
+      padding: 5,
       opacity: 1,
       transition: {
         duration: 0.7,
@@ -91,9 +92,11 @@ const About = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-around",
-
+          overflow: "hidden",
           width: "100%",
-          height: "100%",
+          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
+          backgroundImage:
+            "radial-gradient(at 0% 40% , #009B4D50 0px , #01011800 80%)",
         }}
       >
         <Grid
@@ -105,7 +108,7 @@ const About = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: 4,
+            marginTop: 8,
           }}
         >
           <Box
@@ -116,10 +119,10 @@ const About = () => {
             whileHover="hover"
             exit="exit"
             sx={{
-              width: { xs: 250, sm: 300, md: 450, lg: 400 },
-              height: { xs: 250, sm: 300, md: 450, lg: 400 },
-              borderRadius: 50,
-              padding: 10,
+              width: { xs: 250, sm: 300, md: 450, lg: 400, xl: 600 },
+              height: { xs: 250, sm: 300, md: 450, lg: 400, xl: 600 },
+              borderRadius: "50%",
+
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -129,26 +132,17 @@ const About = () => {
               alt="Folayan Olamide Mayokun"
               src="./image.jpg"
               sx={{
-                width: { xs: 250, sm: 300, md: 450, lg: 400 },
-                height: { xs: 250, sm: 300, md: 450, lg: 400 },
-                margin: 10,
+                width: { xs: 250, sm: 300, md: 450, lg: 400, xl: 600 },
+                height: { xs: 250, sm: 300, md: 450, lg: 400, xl: 600 },
               }}
             />
           </Box>
         </Grid>
-        <Grid
-          item
-          xs={11}
-          md={11}
-          lg={5}
-          sx={{
-            padding: "10px",
-          }}
-        >
+        <Grid item xs={11} md={11} lg={5} xl={6}>
           <Box
             sx={{
               width: "100%",
-              padding: "2px",
+
               textAlign: { xs: "center", md: "start" },
             }}
           >
@@ -163,7 +157,7 @@ const About = () => {
               exit="exit"
               sx={{
                 fontFamily: "Lexend Giga",
-                fontSize: { xs: 30, md: 60 },
+                fontSize: { xs: 25, md: 60 },
                 margin: "5px",
               }}
             >
@@ -181,7 +175,7 @@ const About = () => {
               sx={{
                 fontFamily: "Lexend Giga",
                 margin: "5px",
-                fontSize: { xs: 30, md: 40 },
+                fontSize: { xs: 20, md: 40 },
               }}
             >
               Software Developer
@@ -212,6 +206,7 @@ const About = () => {
               sx={{
                 width: "100%",
                 display: "flex",
+                marginBottom: 2,
               }}
             >
               <Button

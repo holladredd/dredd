@@ -114,7 +114,7 @@ const Contact = () => {
           position: "absolute",
           color: "#c7d9f7fd",
           fontFamily: "Short Stack",
-          bottom: { xs: 70, md: 16 },
+          bottom: { xs: 100, md: 120 },
           right: -30,
           zIndex: 30,
         }}
@@ -123,124 +123,132 @@ const Contact = () => {
       </Button>
       <Box
         sx={{
-          margin: "5px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-
-          height: "60vh",
+          backgroundImage:
+            "radial-gradient(at 100% 100% , #009B4D50 0px , #01011800 80%)",
+          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
         }}
       >
         <Box
-          sx={{ width: "100%" }}
-          component={motion.div}
-          variants={subComponent}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-          exit="exit"
-        >
-          <Typography
-            color="#c7d9f7fd"
-            variant="h1"
-            sx={{
-              textAlign: "start",
-              fontFamily: "Moirai One",
-              fonSize: 60,
-            }}
-          >
-            Hi.
-          </Typography>
-          <Typography
-            variant="caption"
-            color="#c7d9f7fd"
-            sx={{
-              margin: "10px",
-              textAlign: "start",
-              fontFamily: "Short Stack",
-            }}
-          >
-            Would you like a stunning, meticulously crafted website that you can
-            fully own and easily manage on your own?
-          </Typography>
-
-          <Typography
-            variant="caption"
-            color="#c7d9f7fd"
-            sx={{
-              margin: "10px",
-
-              textAlign: "start",
-              fontFamily: "Short Stack",
-            }}
-          >
-            Or <br />
-            Are you seeking a visually captivating and effectively organized
-            graphic design for your brand?
-          </Typography>
-          <Box sx={{ display: "flex" }}>
-            <Typography
-              variant="caption"
-              color="#c7d9f7fd"
-              sx={{
-                margin: "10px",
-                textAlign: "start",
-                fontFamily: "Short Stack",
-              }}
-            >
-              Email:
-            </Typography>
-            <Typography
-              component={Link}
-              to="holladred@gmail.com"
-              variant="caption"
-              color="#c7d9f7fd"
-              sx={{
-                margin: "10px",
-                textAlign: "start",
-                fontFamily: "Short Stack",
-              }}
-            >
-              holladred@gmail.com
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          width: "90%",
-          padding: "5px",
-          position: "relative",
-          bottom: 16,
-          left: 16,
-        }}
-      >
-        <Typography
-          variant="caption"
-          color="#c7d9f7fd"
-          fontFamily="Short Stack"
-        >
-          On social:
-        </Typography>
-        <Box
-          component={motion.div}
-          variants={subComponent}
-          initial="hidden"
-          animate="visible2"
-          whileHover="borderLeft"
-          exit="exit"
           sx={{
-            borderLeft: "2px solid #c7d9f7fd",
-            borderBottom: "2px solid #c7d9f7fd",
-            width: "10%",
+            margin: "5px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+            height: "60vh",
           }}
         >
-          {links.map((link, id) => (
-            <Link key={id} to={link.linkTo}>
-              {link.icon}
-            </Link>
-          ))}
+          <Box
+            sx={{ width: "100%" }}
+            component={motion.div}
+            variants={subComponent}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+            exit="exit"
+          >
+            <Typography
+              color="#c7d9f7fd"
+              variant="h1"
+              sx={{
+                textAlign: "start",
+                fontFamily: "Moirai One",
+                fonSize: 60,
+              }}
+            >
+              Hi.
+            </Typography>
+            <Typography
+              variant="caption"
+              color="#c7d9f7fd"
+              sx={{
+                margin: "10px",
+                textAlign: "start",
+                fontFamily: "Short Stack",
+              }}
+            >
+              Would you like a stunning, meticulously crafted website that you
+              can fully own and easily manage on your own?
+            </Typography>
+
+            <Typography
+              variant="caption"
+              color="#c7d9f7fd"
+              sx={{
+                margin: "10px",
+
+                textAlign: "start",
+                fontFamily: "Short Stack",
+              }}
+            >
+              Or <br />
+              Are you seeking a visually captivating and effectively organized
+              graphic design for your brand?
+            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <Typography
+                variant="caption"
+                color="#c7d9f7fd"
+                sx={{
+                  margin: "10px",
+                  textAlign: "start",
+                  fontFamily: "Short Stack",
+                }}
+              >
+                Email:
+              </Typography>
+              <Typography
+                component={Link}
+                to="holladred@gmail.com"
+                variant="caption"
+                color="#c7d9f7fd"
+                sx={{
+                  margin: "10px",
+                  textAlign: "start",
+                  fontFamily: "Short Stack",
+                }}
+              >
+                holladred@gmail.com
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            width: "90%",
+            padding: "5px",
+            position: "relative",
+            bottom: 16,
+            left: 16,
+          }}
+        >
+          <Typography
+            variant="caption"
+            color="#c7d9f7fd"
+            fontFamily="Short Stack"
+          >
+            On social:
+          </Typography>
+          <Box
+            component={motion.div}
+            variants={subComponent}
+            initial="hidden"
+            animate="visible2"
+            whileHover="borderLeft"
+            exit="exit"
+            sx={{
+              borderLeft: "2px solid #c7d9f7fd",
+              borderBottom: "2px solid #c7d9f7fd",
+              width: "10%",
+            }}
+          >
+            {links.map((link, id) => (
+              <Link key={id} to={link.linkTo}>
+                {link.icon}
+              </Link>
+            ))}
+          </Box>
         </Box>
       </Box>
     </PageTransition>
