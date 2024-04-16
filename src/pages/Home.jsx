@@ -8,12 +8,12 @@ const dropIn = {
   hidden: {
     y: 0,
     opacity: 0,
-    scale: 0.5,
+    scale: 0.9,
   },
   visible: {
     y: 0,
-    scale: 0.9,
-    borderRadius: "2%",
+    scale: 1,
+
     opacity: 1,
     transition: {
       duration: 0.7,
@@ -24,7 +24,7 @@ const dropIn = {
     },
   },
   hover: {
-    scale: 0.7,
+    scale: 0.98,
   },
   scale: {
     scale: 1,
@@ -53,8 +53,9 @@ const Home = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
-          alignItems: { xs: "center", lg: "flex-start" },
+          height: { xs: "100vh", lg: "100vh", xl: "100vh" },
+          alignItems: { xs: "center", lg: "initial" },
+          paddingLeft: { sx: 0, lg: 5 },
 
           backgroundImage:
             "radial-gradient(at 0% 20% , #009B4D50 0px , #01011800 80%)",
@@ -63,7 +64,7 @@ const Home = () => {
         <Typography
           sx={{
             zIndex: 0,
-            fontSize: { sm: 150, lg: 200 },
+            fontSize: { xs: 90, sm: 130, lg: 130, xl: 200 },
             fontFamily: "monoton",
             color: "#c7d9f7fd",
             marginTop: { xs: 20, md: 10 },
@@ -86,7 +87,7 @@ const Home = () => {
             fontFamily: "monoton",
             color: "#c7d9f7fd",
             margin: 0,
-            fontSize: { sm: 130, lg: 200 },
+            fontSize: { xs: 90, sm: 100, lg: 130, xl: 200 },
             marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
@@ -105,7 +106,7 @@ const Home = () => {
             zIndex: 0,
             fontFamily: "monoton",
             color: "#c7d9f7fd",
-            fontSize: { sm: 150, lg: 200 },
+            fontSize: { xs: 80, sm: 120, lg: 130, xl: 200 },
             marginBottom: { md: 5, lg: 0 },
           }}
           variant="h1"
@@ -130,9 +131,10 @@ const Home = () => {
           sx={{
             fontFamily: "short stack",
             color: "#c7d9f7fd",
-            display: "flex",
 
-            alignSelf: "center",
+            position: "absolute",
+            top: { xs: "70%", lg: "50%", xl: "40%" },
+            right: { xs: "32%", lg: "20%" },
           }}
           startIcon={<FaLongArrowAltRight />}
           onClick={navigate}

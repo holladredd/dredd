@@ -152,12 +152,12 @@ const Project = () => {
       <Box
         sx={{
           margin: "5px",
-
+          width: "100%",
           display: "flex",
           flexDirection: "column",
-          height: { xs: "100vh", md: "85vh", lg: "90vh", xl: "100vh" },
+          height: { xs: "fit", md: "85vh", lg: "90vh", xl: "100vh" },
           backgroundImage:
-            "radial-gradient(at 100% 100% , #009B4D50 0px , #01011800 80%)",
+            "radial-gradient(at 100% 50% , #009B4D30 0px , #01011800 80%)",
         }}
       >
         <Typography

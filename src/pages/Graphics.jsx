@@ -102,7 +102,7 @@ const graphics = [
 const Graphics = () => {
   const subComponent = {
     hidden: {
-      y: -50,
+      y: 0,
       opacity: 0,
       scale: 0.5,
     },
@@ -121,9 +121,9 @@ const Graphics = () => {
       },
     },
     visible2: {
-      y: 20,
+      y: 0,
       scale: 1,
-      border: "4px solid #c7d9f7fd",
+      border: "1px solid #009B4D40",
       opacity: 1,
       transition: {
         duration: 0.7,
@@ -145,7 +145,7 @@ const Graphics = () => {
       },
     },
     hover: {
-      borderLeft: "6px solid #c7d9f7fd",
+      borderLeft: "1px solid #009B4D60",
       color: "#009b4d",
       // borderRight: "5px solid #c7d9f7fd",
     },
@@ -155,13 +155,13 @@ const Graphics = () => {
       color: "#0694c6",
     },
     scaleone: {
-      scale: 0.9,
+      scale: 0.99,
       rotate: 0.5,
       color: "#c5b206be",
-      border: "6px solid #c7d9f7fd",
+      border: "2px solid #c7d9f75e",
     },
     exit: {
-      y: 20,
+      y: 0,
       opacity: 0,
     },
   };
@@ -171,9 +171,9 @@ const Graphics = () => {
       <Box
         sx={{
           overflowY: "scroll",
-          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
+          height: { xs: "100vh", lg: "100vh", xl: "100vh" },
           backgroundImage:
-            "radial-gradient(at 100% 50% , #009B4D50 0px , #01011800 80%)",
+            "radial-gradient(at 100% 0% , #009B4D60 0px , #01011800 80%)",
         }}
       >
         <Box
@@ -194,10 +194,11 @@ const Graphics = () => {
             whileHover="hover"
             exit="exit"
             sx={{
-              marginTop: 8,
+              marginTop: 18,
               width: "fit",
               fontFamily: "Moirai One",
-              fontSize: 60,
+              fontSize: 50,
+              zIndex: 50,
             }}
           >
             Graphics.
@@ -206,8 +207,11 @@ const Graphics = () => {
 
         <Masonry
           columns={{ xs: 2, sm: 2, md: 4, lg: 5 }}
-          spacing={2}
-          sx={{ margin: 2, width: { xs: "90%", md: "95%" } }}
+          spacing={1}
+          sx={{
+            margin: 3,
+            width: { xs: "95%", md: "95%" },
+          }}
         >
           {graphics.map((graphic, id) => (
             <Card
@@ -219,7 +223,6 @@ const Graphics = () => {
               exit="exit"
               key={id}
               sx={{
-                border: "4px solid #c7d9f7fd",
                 borderRadius: "20px",
 
                 postion: "absolute",
@@ -241,7 +244,7 @@ const Graphics = () => {
                     display: "block",
                     position: "relative",
                     Width: "100%",
-                    height: "auto",
+                    height: "100%",
                   }}
                   image={graphic.src}
                 />
@@ -259,7 +262,7 @@ const Graphics = () => {
                     opacity: 1,
                     "&:hover": {
                       mixBlendMode: "multiply",
-                      backgroundColor: "#0003085e",
+                      backgroundColor: "#009B4D40",
                     },
                   }}
                 >
@@ -271,9 +274,11 @@ const Graphics = () => {
                       padding: 1,
                       position: "absolute",
                       bottom: -10,
-                      backgroundColor: "#00000063",
+                      // backgroundColor: "#00000063",
+                      backgroundImage:
+                        "radial-gradient(at 100% 0% , #009B4D60 0px , #010118f0 80%)",
                       // boxShadow: "0px 0px 20px #00000063",
-                      boxShadow: "0px 1px 5px #aeafb1, 0px -1px 5px #aeafb1",
+                      boxShadow: " 0px -5px 30px #009B4D60",
                       fontFamily: "Short Stack",
                       fontWeight: 600,
                       fontSize: 20,

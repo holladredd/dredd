@@ -24,7 +24,8 @@ const navItems = [
     id: 1,
     link: "/",
     text: "Home",
-    icon: <MdHomeFilled size={30} />,
+    icon: <MdHomeFilled size={20} />,
+    bgcolor: "radial-gradient(at 0% 0% , #009B4D50 0px , #01011800 80%)",
     color: "#d6d5e6d0",
     image:
       "url(https://images.unsplash.com/photo-1585854467604-cf2080ccef31?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
@@ -33,7 +34,8 @@ const navItems = [
     id: 2,
     link: "About",
     text: "About",
-    icon: <CgProfile size={30} />,
+    icon: <CgProfile size={20} />,
+    bgcolor: "radial-gradient(at 0% 100% , #009B4D50 0px , #01011800 80%)",
     color: "#d6d5e6d0",
     image:
       "url(https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
@@ -42,7 +44,8 @@ const navItems = [
     id: 3,
     link: "Contact",
     text: "Contact",
-    icon: <PiPhoneCallFill size={30} />,
+    icon: <PiPhoneCallFill size={20} />,
+    bgcolor: "radial-gradient(at 100% 100% , #009B4D50 0px , #01011800 80%)",
     color: "#d6d5e6d0",
     image:
       "url(https://images.unsplash.com/photo-1512998844734-cd2cca565822?q=80&w=1442&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
@@ -51,7 +54,8 @@ const navItems = [
     id: 4,
     link: "Project",
     text: "Project",
-    icon: <SiOpenproject size={30} />,
+    icon: <SiOpenproject size={20} />,
+    bgcolor: "radial-gradient(at 100% 0% , #009B4D50 0px , #01011800 80%)",
     color: "#d6d5e6d0",
     image:
       "url(https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
@@ -293,6 +297,7 @@ const Navbar = () => {
                   display: "flex",
                   justifyContent: "center",
                   width: "100%",
+
                   marginTop: 2,
                 }}
               >
@@ -308,7 +313,8 @@ const Navbar = () => {
                     textDecoration: "none",
                     borderRadius: 4,
                     backdropFilter: "blur(10px)",
-                    backgroundColor: "#0c1a32d3",
+                    // backgroundColor: "#0c1a32d3",
+                    backgroundImage: navItem.bgcolor,
                     opacity: "90%",
                   }}
                 >
@@ -319,7 +325,7 @@ const Navbar = () => {
                       display: "flex",
                       flexDirection: "column",
                       borderRadius: "10px",
-                      border: "2px solid #c7d9f7fd",
+                      border: "2px solid #c7d9f710",
                       mixBlendMode: "normal",
                       backgroundColor: "none",
                     }}
@@ -329,18 +335,21 @@ const Navbar = () => {
                         display: "flex",
                         justifyContent: "space-between",
                         width: "100%",
+                        alignItems: "center",
+
                         color: "#c7d9f7fd",
                       }}
                     >
                       {navItem.icon}
-                      <MdAir size={30} />
+                      <MdAir size={20} />
                     </Box>
                     <Typography
                       sx={{
+                        fontSize: { xs: 75, xl: 150 },
                         fontFamily: "Tilt Prism",
                       }}
                       variant="h2"
-                      color="#c7d9f7fd"
+                      color="#c7d9f75e"
                     >
                       {navItem.text}
                     </Typography>

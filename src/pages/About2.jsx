@@ -145,8 +145,8 @@ const About2 = () => {
           alignItems: "center",
           justifyContent: "space-around",
           width: "100%",
-          height: { xs: "100vh", lg: "90vh", xl: "100vh" },
-          marginBottom: 5,
+          height: { xs: "100%", lg: "90vh", xl: "100vh" },
+
           backgroundImage:
             "radial-gradient(at 0% 100% , #009B4D50 0px , #01011800 80%)",
         }}
@@ -173,7 +173,7 @@ const About2 = () => {
           <Typography
             variant="h2"
             color="#c7d9f7fd"
-            sx={{ fontFamily: "Moirai One" }}
+            sx={{ fontFamily: "Moirai One", marginTop: 8 }}
           >
             My Works
           </Typography>

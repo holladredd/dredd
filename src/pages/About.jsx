@@ -138,6 +138,7 @@ const About = () => {
             />
           </Box>
         </Grid>
+
         <Grid item xs={11} md={11} lg={5} xl={6}>
           <Box
             sx={{
