@@ -3,7 +3,7 @@ import PageTransition from "./../components/PageTransition";
 import { motion } from "framer-motion";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoMdCloudDownload } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const About = () => {
   const dropIn = {
@@ -219,18 +219,28 @@ const About = () => {
                 animate="visible"
                 whileHover="scaleone"
                 exit="exit"
+                startIcon={<IoMdCloudDownload />}
                 sx={{
                   fontFamily: "Short Stack",
                   color: "white",
                   display: "flex",
                 }}
-                startIcon={<IoMdCloudDownload />}
-                onClick={navigate}
               >
-                download cv
+                <Typography
+                  variant="body1"
+                  component={Link}
+                  to="https://drive.google.com/file/d/1uGJXSoBcCw6zI5xiFb0xhiE5N0kNwMea/view?usp=drive_link"
+                  sx={{
+                    fontFamily: "Short Stack",
+                    color: "white",
+                    textDecoration: "none",
+                  }}
+                >
+                  download cv
+                </Typography>
               </Button>
               <Button
-                variant="outlined"
+                variant="text"
                 component={motion.button}
                 variants={dropIn}
                 initial="hidden"
@@ -241,6 +251,9 @@ const About = () => {
                   fontFamily: "Short Stack",
                   color: "white",
                   display: "flex",
+                  borderRadius: 10,
+                  backgroundImage:
+                    "radial-gradient(at 0% 20% , #009B4D90 0px , #01011800 70%)",
                 }}
                 startIcon={<FaLongArrowAltRight />}
                 onClick={navigate}
