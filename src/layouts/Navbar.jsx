@@ -338,7 +338,7 @@ const Navbar = () => {
                         width: "100%",
                         alignItems: "center",
 
-                        color: "#c7d9f7fd",
+                        color: "#c7d9f740",
                       }}
                     >
                       {navItem.icon}
