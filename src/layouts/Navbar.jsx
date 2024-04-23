@@ -16,7 +16,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { SiOpenproject } from "react-icons/si";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, Reorder, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const navItems = [
@@ -129,6 +129,7 @@ const links = [
 ];
 const Navbar = () => {
   const [open, setOpen] = useState();
+  const [items, setItems] = useState(navItems);
   const openDrawer = () => {
     setOpen((current) => !current);
   };
@@ -204,6 +205,10 @@ const Navbar = () => {
         {open ? (
           <Grid
             container
+            component={Reorder.Group}
+            axis="y"
+            onReorder={setItems}
+            values={items}
             sx={{
               display: open ? "flex" : "none",
               justifyContent: "space-around",
@@ -280,15 +285,21 @@ const Navbar = () => {
                 dredd
               </Typography>
             </Box>
-            {navItems.map((navItem, id) => (
+
+            {items.map((navItem) => (
               <Grid
                 item
-                key={id}
                 xs={10}
                 md={5}
-                component={motion.div}
+                key={navItem}
+                navItem
+                // item={navItem}
                 drag
-                dragConstraints={{left:0,right:0,top:0,bottom:0}}
+                value={navItem}
+                id={navItem}
+                dragElastic={0.4}
+                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                component={Reorder.Item}
                 initial="hidden"
                 animate="visible"
                 variants={dropIn}
@@ -298,7 +309,6 @@ const Navbar = () => {
                   display: "flex",
                   justifyContent: "center",
                   width: "100%",
-
                   marginTop: 2,
                 }}
               >
@@ -314,7 +324,6 @@ const Navbar = () => {
                     textDecoration: "none",
                     borderRadius: 4,
                     backdropFilter: "blur(10px)",
-                    // backgroundColor: "#0c1a32d3",
                     backgroundImage: navItem.bgcolor,
                     opacity: "90%",
                   }}
@@ -337,7 +346,6 @@ const Navbar = () => {
                         justifyContent: "space-between",
                         width: "100%",
                         alignItems: "center",
-
                         color: "#c7d9f740",
                       }}
                     >
