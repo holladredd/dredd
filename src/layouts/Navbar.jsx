@@ -130,6 +130,7 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState();
   const [items, setItems] = useState(navItems);
+
   const openDrawer = () => {
     setOpen((current) => !current);
   };
@@ -166,35 +167,27 @@ const Navbar = () => {
 
           <AnimatePresence initial={false} mode="wait">
             {open ? (
-             
+              <Box>
                 <MdClose
-                   component={motion.span}
-                variants={dropIn}
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                exit="exit"
                   color="#c7d9f7fd"
                   onClick={openDrawer}
                   size={40}
                   zIndex={40}
                 />
-       
+              </Box>
             ) : (
-             
-                <MdMenu
-                  component={motion.span}
+              <MdMenu
+                component={motion.span}
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
                 whileHover="hover"
                 exit="exit"
-                  color="#c7d9f7fd"
-                  onClick={openDrawer}
-                  size={40}
-                  zIndex={40}
-                />
-           
+                color="#c7d9f7fd"
+                onClick={openDrawer}
+                size={40}
+                zIndex={40}
+              />
             )}
           </AnimatePresence>
         </Toolbar>
@@ -228,9 +221,7 @@ const Navbar = () => {
             }}
             zIndex={40}
           >
-            <Grid
-              item
-              xs={10}
+            <Box
               sx={{
                 justifyContent: "flex-end",
                 alignItems: "center",
@@ -258,7 +249,7 @@ const Navbar = () => {
                   </Link>
                 ))}
               </Box>
-            </Grid>
+            </Box>
             <Box
               sx={{
                 width: "100%",
@@ -286,17 +277,12 @@ const Navbar = () => {
 
             {items.map((navItem) => (
               <Grid
-                item
-                xs={10}
+                xs={11}
                 md={5}
                 key={navItem}
-                navItem
-                // item={navItem}
-{/*                 drag */}
+                item={navItem}
                 value={navItem}
                 id={navItem}
-{/*                 dragElastic={0.4} */}
-{/*                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} */}
                 component={Reorder.Item}
                 initial="hidden"
                 animate="visible"
@@ -306,7 +292,6 @@ const Navbar = () => {
                 sx={{
                   display: "flex",
                   justifyContent: "center",
-                  width: "100%",
                   marginTop: 2,
                 }}
               >
@@ -323,7 +308,7 @@ const Navbar = () => {
                     borderRadius: 4,
                     backdropFilter: "blur(10px)",
                     backgroundImage: navItem.bgcolor,
-                    opacity: "90%",
+                    opacity: "100%",
                   }}
                 >
                   <Box
@@ -333,7 +318,7 @@ const Navbar = () => {
                       display: "flex",
                       flexDirection: "column",
                       borderRadius: "10px",
-                      border: "2px solid #c7d9f710",
+                      border: "1px solid #c7d9f740",
                       mixBlendMode: "normal",
                       backgroundColor: "none",
                     }}
@@ -342,9 +327,10 @@ const Navbar = () => {
                       sx={{
                         display: "flex",
                         justifyContent: "space-between",
-                        width: "100%",
+                        maxWidth: "100%",
                         alignItems: "center",
-                        color: "#c7d9f740",
+                        color: "#c7d9f780",
+                        margin: 1,
                       }}
                     >
                       {navItem.icon}
@@ -356,7 +342,7 @@ const Navbar = () => {
                         fontFamily: "Tilt Prism",
                       }}
                       variant="h2"
-                      color="#c7d9f75e"
+                      color="#c7d9f780"
                     >
                       {navItem.text}
                     </Typography>
