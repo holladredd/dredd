@@ -166,37 +166,35 @@ const Navbar = () => {
 
           <AnimatePresence initial={false} mode="wait">
             {open ? (
-              <Box
-                component={motion.div}
-                variants={dropIn}
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                exit="exit"
-              >
+             
                 <MdClose
-                  color="#c7d9f7fd"
-                  onClick={openDrawer}
-                  size={40}
-                  zIndex={40}
-                />
-              </Box>
-            ) : (
-              <Box
-                component={motion.div}
+                   component={motion.span}
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
                 whileHover="hover"
                 exit="exit"
-              >
-                <MdMenu
                   color="#c7d9f7fd"
                   onClick={openDrawer}
                   size={40}
                   zIndex={40}
                 />
-              </Box>
+       
+            ) : (
+             
+                <MdMenu
+                  component={motion.span}
+                variants={dropIn}
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
+                exit="exit"
+                  color="#c7d9f7fd"
+                  onClick={openDrawer}
+                  size={40}
+                  zIndex={40}
+                />
+           
             )}
           </AnimatePresence>
         </Toolbar>
@@ -294,11 +292,11 @@ const Navbar = () => {
                 key={navItem}
                 navItem
                 // item={navItem}
-                drag
+{/*                 drag */}
                 value={navItem}
                 id={navItem}
-                dragElastic={0.4}
-                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+{/*                 dragElastic={0.4} */}
+{/*                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} */}
                 component={Reorder.Item}
                 initial="hidden"
                 animate="visible"
