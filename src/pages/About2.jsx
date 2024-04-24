@@ -1,9 +1,11 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import PageTransition from "./../components/PageTransition";
 import { motion } from "framer-motion";
 import { CgDesignmodo } from "react-icons/cg";
 import { MdAnimation, MdModelTraining, MdBook } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import NavButton from "../components/NavButton";
+
+// import { useRef } from "react";
 
 // import { useNavigate } from "react-router-dom";
 const works = [
@@ -77,67 +79,11 @@ const About2 = () => {
       opacity: 0,
     },
   };
-
-  const navi = useNavigate();
+  // const constraintsRef = useRef(null);
 
   return (
     <PageTransition>
-      <Box
-        component={motion.div}
-        initial={{
-          opacity: 0,
-          scale: 0.8,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-        }}
-        whileHover={{
-          opacity: 0.7,
-        }}
-        exit={{
-          opacity: 0,
-          scale: 0.8,
-        }}
-        sx={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "space-between",
-          alignItems: "center",
-          zIndex: 40,
-          position: "fixed",
-          bottom: -10,
-          backgroundImage:
-            "radial-gradient(at 0% 100% , #009B4D50 0px , #01011800 80%)",
-        }}
-      >
-        <Button
-          vairant="text"
-          onClick={() => navi("/About")}
-          sx={{
-            marginLeft: 1,
-            padding: 2,
-            color: "#c7d9f7fd",
-            fontFamily: "Short Stack",
-          }}
-        >
-          {/* <IoIosArrowBack size={60} /> */}
-          go back
-        </Button>
-        <Button
-          vairant="text"
-          onClick={() => navi("/Skills")}
-          sx={{
-            marginRight: 1,
-            padding: 2,
-            color: "#c7d9f7fd",
-            fontFamily: "Short Stack",
-          }}
-        >
-          {/* <IoIosArrowForward size={60} /> */}
-          Go to skills
-        </Button>
-      </Box>
+      <NavButton />
       <Grid
         container
         sx={{
@@ -145,7 +91,7 @@ const About2 = () => {
           alignItems: "center",
           justifyContent: "space-around",
           width: "100%",
-          height: { xs: "100%", lg: "90vh", xl: "100vh" },
+          height: { xs: "fit", md: "100vh", lg: "100vh" },
 
           backgroundImage:
             "radial-gradient(at 0% 100% , #009B4D50 0px , #01011800 80%)",

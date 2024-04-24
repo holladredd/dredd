@@ -1,16 +1,16 @@
-import { Box, Grid, Button, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import PageTransition from "./../components/PageTransition";
 import { motion } from "framer-motion";
 
 import { IoLogoPython } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
 import { DiJavascript } from "react-icons/di";
 import { SiAdobeaftereffects } from "react-icons/si";
 import { SiRobotframework } from "react-icons/si";
 
 import { FaDatabase, FaGithub } from "react-icons/fa";
 import { FaNode } from "react-icons/fa6";
-
+import NavButton from "../components/NavButton";
+// import { useRef } from "react";
 const graphics = [
   {
     name: " Photoshop",
@@ -120,78 +120,11 @@ const Skills = () => {
       opacity: 0,
     },
   };
+  // const constraintsRef = useRef(null);
 
-  const navi = useNavigate();
   return (
     <PageTransition>
-      <Box
-        sx={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "space-between",
-          alignItems: "center",
-          zIndex: 40,
-          position: "absolute",
-          bottom: 40,
-        }}
-      >
-        <Button
-          vairant="text"
-          onClick={() => navi("/About2")}
-          component={motion.div}
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            transform: "rotate(-90deg)",
-            borderTop: "2px solid #c7d9f7fd",
-            borderLeft: "2px solid #c7d9f7fd",
-          }}
-          whileHover={{
-            opacity: 0.7,
-            borderTop: "5px solid #c7d9f7fd",
-            borderLeft: "5px solid #c7d9f7fd",
-          }}
-          exit={{
-            opacity: 0,
-            scale: 0.8,
-          }}
-          sx={{ padding: 1, color: "#c7d9f7fd", fontFamily: "Short Stack" }}
-        >
-          go back
-        </Button>
-        <Button
-          vairant="text"
-          onClick={() => navi("/Contact")}
-          component={motion.div}
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            borderLeft: "2px solid #c7d9f7fd",
-            transform: "rotate(-90deg)",
-            borderBottom: "2px solid #c7d9f7fd",
-          }}
-          whileHover={{
-            borderLeft: "5px solid #c7d9f7fd",
-            borderBottom: "5px solid #c7d9f7fd",
-            opacity: 0.7,
-          }}
-          exit={{
-            opacity: 0,
-            scale: 0.8,
-          }}
-          sx={{ padding: 1, color: "#c7d9f7fd", fontFamily: "Short Stack" }}
-        >
-          Contact
-        </Button>
-      </Box>
+      <NavButton />
       <Grid
         container
         sx={{
@@ -286,8 +219,8 @@ const Skills = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-
-                  backgroundColor: "#0c3d32",
+                  backgroundImage:
+                    "radial-gradient(at 0% 100% , #009B4D90 0px , #01011820 80%)",
                   padding: "10px",
                   borderRadius: 2.5,
                   margin: "2px",
@@ -363,7 +296,8 @@ const Skills = () => {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  backgroundColor: "#0c3d32",
+                  backgroundImage:
+                    "radial-gradient(at 0% 100% , #009B4D60 0px , #01011820 80%)",
                   padding: "10px",
                   borderRadius: 2.5,
                   marginTop: "2px",

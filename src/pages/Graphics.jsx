@@ -170,6 +170,9 @@ const Graphics = () => {
     <PageTransition>
       <Box
         sx={{
+          width: "100%",
+
+          flexDirection: "column",
           overflowY: "scroll",
           height: { xs: "100vh", lg: "100vh", xl: "100vh" },
           backgroundImage:
@@ -178,6 +181,7 @@ const Graphics = () => {
       >
         <Box
           sx={{
+            marginTop: 10,
             width: "100%",
             display: "flex",
             textAlign: "center",
@@ -194,7 +198,6 @@ const Graphics = () => {
             whileHover="hover"
             exit="exit"
             sx={{
-              marginTop: 18,
               width: "fit",
               fontFamily: "Moirai One",
               fontSize: 50,
@@ -209,8 +212,9 @@ const Graphics = () => {
           columns={{ xs: 2, sm: 2, md: 4, lg: 5 }}
           spacing={1}
           sx={{
-            margin: 3,
             width: { xs: "95%", md: "95%" },
+            marginLeft: 1,
+            marginRight: 1,
           }}
         >
           {graphics.map((graphic, id) => (
@@ -223,7 +227,7 @@ const Graphics = () => {
               exit="exit"
               key={id}
               sx={{
-                borderRadius: "20px",
+                borderRadius: "10px",
 
                 postion: "absolute",
                 display: "block",
